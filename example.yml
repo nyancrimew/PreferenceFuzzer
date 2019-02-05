@@ -1,0 +1,33 @@
+package: com.example.app
+# SharedPreferences name
+name: com.example.app_preferences
+# Activity to start after replacing the preference file
+activity: .MainActivity
+preferences:
+  - name: prefNumber
+    type: int
+    range: 0..20;1 # step default = 1
+  - name: prefNumber2
+    type: int
+    values:
+      - 1
+      - 4
+  - name: prefFloat
+    type: float
+    range: 0..1;0.1 # step default = 1
+  - name: prefString
+    type: string # can be omitted
+    values:
+      - example value
+      - another example
+  - name: prefBoolean
+    type: boolean
+  - name: prefStringSet
+    type: set
+    min: 1 # minimal number of items, default = 1
+    max: -1 # maximal number of items, -1 means unlimited, default = -1
+    values:
+      - example value
+      - another example
+      - yet another example
+      - wow so many examples
